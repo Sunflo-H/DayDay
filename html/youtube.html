@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/reset.css" rel="stylesheet">
+        <link href="../css/youtube.css" rel="stylesheet">
+        <link href="/css/header-except-index.css" rel="stylesheet">
+        <script src="/js/header.js"></script>
+        <script src="/js/youtube.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- <video controls="controls"> <source src="../video/sampl.mkv"> <source
+        src="../video/sample2.mkv"> </video> -->
+        <header>
+            <!-- 사이드바 -->
+            <aside>
+                <div class="side">
+                    <div>
+                        <input type="checkbox" id="menuicon">
+                        <label for="menuicon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                        <div class="sidebar">
+                            <div class="sidebar-margin">
+                                <a href="login.html" class="menu hover-login">
+                                    <span>로그인</span></a>
+                                <a href="index.html" class="menu hover-home">
+                                    <span>홈</span></a>
+                                <a href="youtube.html" class="menu hover-blue">
+                                    <span>하루영상</span></a>
+                                <a href="todolist.html" class="menu hover-red">
+                                    <span>To DO List</span></a>
+                                <a href="cloth.html" class="menu hover-yellow">
+                                    <span>오늘 뭐 입지?</span></a>
+                                <a href="weight.html" class="menu hover-green">
+                                    <span>몸매 관리</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </header>
+
+        <div class="title">
+            <span>하루 영상</span>
+        </div>
+        <main>
+            <!--여러 영상들이 랜덤재생되게 만들자-->
+            <div class="youtube-box open-youtube">
+                <iframe
+                    class="video"
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube-nocookie.com/embed/wpj__APyZX4"
+                    title="YouTube video
+                player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write;
+                encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen="allowfullscreen"></iframe>
+                <form action="" class="form hidden">
+                    <div class="add-video-box ">
+                        <div>
+                            <div class="input-box">
+                                <div>제목</div>
+                                <input type="text" id="title" name="title">
+                            </div>
+
+                            <div class="input-box">
+                                <div>src</div>
+                                <input type="text" id="src" name="src">
+                            </div>
+                        </div>
+                        <div class="add-video-button-box">
+                            <div class="add-video-button">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="video-list-box">
+                        <div>동영상 List</div>
+
+                        <div class="list-box">
+                            <span>시간낭비 멈춰!</span>
+                            <input type="button" value="X" class="remove-video-button">
+                        </div>
+                        <div class="list-box">
+                            <span>시간낭비 멈춰!2</span>
+                            <input type="button" value="X" class="remove-video-button">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <!-- 여기 이미지 setting 이미지로 바꾸자 -->
+            <input type="checkbox" id="check">
+            <label for="check">
+                <div class="setting" for="for">
+                    <span>settin</span>
+                    <span></span>
+                </div>
+            </label>
+            <!-- <button id="open">열기</button> <button id="close">닫기</button> -->
+            <!-- <div class="modal "> <div class="modal_overlay"></div> <div
+            class="modal_content"> <div class="box"></div> </div> </div> -->
+            </main>
+
+    </body>
+</html>

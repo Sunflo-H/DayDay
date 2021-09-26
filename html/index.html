@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/reset.css" rel="stylesheet">
+        <link href="/css/index.css" rel="stylesheet">
+        <script src="/js/index.js"></script>
+        <script src="/js/header.js"></script>
+        <title>Start the Day</title>
+    </head>
+
+    <body>
+        <!-- 원 이펙트 -->
+        <div class="circle-expand">
+            <div class="circle c-green "></div>
+            <div class="circle c-yellow "></div>
+            <div class="circle c-red "></div>
+            <div class="circle c-blue "></div>
+        </div>
+
+        <header>
+            <!-- 사이드바 -->
+            <aside>
+                <div class="opacity-delay">
+                    <div>
+                        <!-- 체크박스 유무에 따라 사이드바 오픈/오프상태 -->
+                        <input type="checkbox" id="menuicon">
+                        <label for="menuicon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                        <div class="sidebar">
+                            <div class="sidebar-margin">
+                                <a href="index.html"  class="menu hover-home"><span>홈</span></a>
+                                <a href="youtube.html" class="menu hover-blue"><span>하루영상</span></a>
+                                <a href="todolist.html" class="menu hover-red"><span>To DO List</span></a>
+                                <a href="cloth.html" class="menu hover-yellow"><span>오늘 뭐 입지?</span></a>
+                                <a href="weight.html" class="menu hover-green"><span>몸매 관리</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </header>
+
+        <article class="opacity-delay">
+            <!--유튜브 영상-->
+            <a href="youtube.html">
+                <div class="youtube-box box">
+                    <div class="title">하루 영상</div>
+                    <div class="quote">
+                        <div class="quote-text-box">
+                            <span id="quote-text" class="leftToRight"></span>
+                        </div>
+                        <div class="quote-author-box">
+                            <span id="quote-author" class="rightToLeft"></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--ToDoList-->
+            <a href="todolist.html">
+                <div class="todo-box box">
+                    <div class="title">To DO List</div>
+                </div>
+            </a>
+            <!--옷-->
+            <a href="cloth.html">
+                <div class="cloth-box box">
+                    <div class="title">오늘 뭐 입지?</div>
+                </div>
+            </a>
+
+            <!--몸무게-->
+            <a href="weight.html">
+                <div class="weight-box box">
+                    <div class="title">몸매 관리</div>
+                </div>
+            </a>
+        </article>
+
+    </body>
+
+</html>

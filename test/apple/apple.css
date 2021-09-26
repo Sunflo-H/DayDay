@@ -1,0 +1,7 @@
+.alert{
+    background: rgb(187, 187, 231);
+    color: blue;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}

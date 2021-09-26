@@ -1,0 +1,347 @@
+html {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+header{
+    display: flex;
+    width: inherit;
+    height: 50px;
+}
+
+article {
+    width: 1000px;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+}
+
+/* 사이드바(aside) */
+input[id="menuicon"]{
+    display: none;
+}
+
+input[id="menuicon"] + label {
+    display: block;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    margin: 9px 20px;
+    z-index: 1;
+}
+
+input[id="menuicon"] + label span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background:#4285f4 ;
+    position: absolute;
+    transition-duration: 0.5s;
+}
+
+input[id="menuicon"] + label span:nth-child(1){
+    top:0;
+}
+
+input[id="menuicon"] + label span:nth-child(2){
+    top: 50%;
+    /* 높이가 2px이니까 top에서 50%만큼 내려온다음 1px만큼 다시 올려야
+    정중앙에 위치한다. */
+    transform: translateY(-50%);
+}
+
+input[id="menuicon"] + label span:nth-child(3){
+    bottom: 0;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(1){
+    top:50%;
+    transform: translateY(-50%) rotate(45deg);
+    background: white;
+    
+}
+
+input[id="menuicon"]:checked + label span:nth-child(2){
+    opacity: 0;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(3){
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+    background: white;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background: #222;
+    transition-duration: 0.5s;
+    position: fixed;
+    top: 0;
+    left: -250px;
+}
+input[id="menuicon"]:checked ~ .sidebar {
+    left: 0;
+}
+.sidebar .sidebar-margin{
+    margin: 60px 0 0 0;
+}
+.sidebar .menu{
+    display: block;
+    width: 100%;
+    height: 50px;
+    color: white;
+    line-height: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.sidebar .menu span{
+    margin-left: 20px;
+}
+
+.sidebar .hover-home:hover{
+    background-color: rgb(30, 212, 212);
+}
+.sidebar .hover-blue:hover{
+    background-color: #4285f4;
+}
+.sidebar .hover-red:hover{
+    background-color: #ea4335;
+}
+.sidebar .hover-yellow:hover{
+    background-color: #fbbc05;
+}
+.sidebar .hover-green:hover{
+    background-color: #34a853;
+}
+
+/* article 유튜브 박스들 */
+.box {
+    width: 1000px;
+    height: 500px;
+    position: absolute;
+    transition-duration: 0.5s;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.youtube-box {
+    background: #4285f4;
+    z-index: 4;
+    margin-top: 150px;
+}
+
+.youtube-box .quote-author-box,
+.youtube-box .quote-text-box {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.quote {
+    width: 1000px;
+    position: absolute;
+    
+    /* 중앙정렬이 아니라서 top만 했다.*/
+    top: 200px;
+}
+
+.quote-text-box{
+    width: 100%;
+}
+#quote-text{
+    display: inline-block;
+    width: 500px;
+}
+
+.quote-author-box{
+    /* width: 500px; */
+    margin-top: 20px;
+    text-align: end;
+}
+#quote-author{
+    display: inline-block;
+    width: 500px;
+}
+
+.todo-box {
+    background: #ea4335;
+    z-index: 3;
+    margin-top: 100px;
+}
+
+.cloth-box {
+    background: #fbbc05;
+    z-index: 2;
+    margin-top: 50px;
+}
+
+.weight-box {
+    background: #34a853;
+    z-index: 1;
+}
+
+.title {
+    width: inherit;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* 원 커지는 효과 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* 원들이 커지는 공간 */
+.circle-expand { 
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    animation-name: hide;
+    animation-duration: 2.9s;
+    animation-fill-mode: forwards;
+}
+@keyframes hide{
+    0%{
+        background: white;
+    }
+
+    99%{
+        height: 100%;
+    }
+
+    100%{
+        height: 10%;
+        
+    }
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation-name: circleExpand;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transform: translate(-50%,-50%);
+    /*원이 커지면서 (0,0)위치로 와야 원이 중앙에서부터 커지는걸 막는다*/
+
+    opacity: 0;
+
+}
+.c-green {
+    background: #34a853;
+    animation-name: circleExpand;
+    animation-delay: 0.1s;
+}
+.c-yellow {
+    background: #fbbc05;
+    animation-name: circleExpand;
+    animation-delay: 0.3s;
+}
+.c-red {
+    background: #ea4335;
+    animation-name: circleExpand;
+    animation-delay: 0.6s;
+}
+.c-blue {
+    background: #4285f4;
+    animation-name: circleExpand;
+    animation-delay: 0.9s;
+}
+
+
+@keyframes circleExpand {
+    0% {
+        border-radius: 9999px;
+        opacity: 1;
+    }
+    /* 정밀조절임.. */
+    20% {
+        opacity: 1;
+    }
+    99%{
+        width: 9999px;
+        height: 9999px;
+        border-radius: 9999px;
+        opacity: 0;
+    }
+    100% {
+        /* display: none; */
+    }
+}
+
+
+/* 컨텐츠들의 투명도 시간 조절 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* 원이 팽창하는 애니메이션이 꺼질때 맞춰서 컨텐츠들의 투명도를 1로 함 */
+.opacity-delay {
+    animation-name: opacityDelay;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opacityDelay {
+    0% {
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*quote 애니메이션 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* 받아온 명언과 작가명을 각각 좌->우로 우->좌로 움직이는 애니메이션 효과  */
+.leftToRight{
+    animation-name: leftToRight;
+    animation-duration: 3.2s;
+    animation-fill-mode: forwards;
+}
+.rightToLeft{
+    animation-name: rightToLeft;
+    animation-duration: 3.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes leftToRight{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(250px);        
+    }
+}
+
+@keyframes rightToLeft{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(-250px);
+    }
+}

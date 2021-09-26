@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/reset.css" rel="stylesheet">
+        <!-- <link href="../css/todolist_copy.css" rel="stylesheet"> -->
+        <link href="../css/todolist_origin.css" rel="stylesheet">
+        <link href="../css/sidebar.css" rel="stylesheet">
+
+
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <!-- 사이드바 -->
+            <aside>
+                <div class="side">
+                    <div>
+                        <input type="checkbox" id="menuicon">
+                        <label for="menuicon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                        <div class="sidebar">
+                            <div class="sidebar-margin">
+                                <a href="index.html" class="menu hover-home">
+                                    <span>홈</span></a>
+                                <a href="youtube.html" class="menu hover-blue">
+                                    <span>하루영상</span></a>
+                                <a href="todolist.html" class="menu hover-red">
+                                    <span>To DO List</span></a>
+                                <a href="cloth.html" class="menu hover-yellow">
+                                    <span>오늘 뭐 입지?</span></a>
+                                <a href="weight.html" class="menu hover-green">
+                                    <span>몸매 관리</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </header>
+        <main>
+            <div class="title">
+                <span>To Did List</span>
+            </div>
+
+            <div class="date">
+                <span id='currentDate'></span>
+            </div>
+
+            <div class="todolist-box">
+                <div class="todo-box left-to-right">
+                    <div class="day box">
+                        <div class="todo-title">일간 목표</div>
+                        <div class="input-box">
+                            <input type="text" class="input-list" placeholder="목표를 적어주세요">
+                            <input type="button" class="input-button" value="등록">
+                        </div>
+                    </div>
+                    <div class=" week  box">
+                        <div class="todo-title">주간 목표</div>
+                        <div class="input-box">
+                            <input type="text" class="input-list" placeholder="목표를 적어주세요">
+                            <input type="button" class="input-button" value="등록">
+                        </div>
+                    </div>
+                    <div class=" month  box">
+                        <div class="todo-title">월간 목표</div>
+                        <div class="input-box">
+                            <input type="text" class="input-list" placeholder="목표를 적어주세요">
+                            <input type="button" class="input-button" value="등록">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="../js/todolist_origin.js"></script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="apple.css">
+    
+
+</head>
+<body>
+    <button class="button" onclick="알림창열기()">열기 버튼</button>
+    <button class="button" onclick="알림창닫기()">닫기 버튼</button>
+
+    <button class="button" onclick="알림창('block')">열기 버튼2</button>
+    <button class="button" onclick="알림창('none')">닫기 버튼2</button>
+    <div class="alert" id="alert">Alert 박스</div>
+    <script>
+        function 알림창열기(){
+            document.getElementById('alert').style.display='block';
+        }
+        function 알림창닫기(){
+            document.getElementById('alert').style.display='none';
+        }
+        function 알림창(state){
+            document.getElementById('alert').style.display=state;
+        }
+    </script>
+
+    <p>-------------------------------------------------------------</p>
+    <button onclick="alertOnOff('block','아이디를 입력 안했습니다')">아이디</button>
+    <button onclick="alertOnOff('block','비밀번호를 입력 안했습니다')">비밀번호</button>
+    <div class="alert" id="alert2" style="display:block">
+        <span id="title">알림창</span>
+        <!-- <button onclick="alertOnOff('none')">X</button> -->
+        <button id="close">X</button>
+    </div>
+    <script>
+        function alertOnOff(state,text){
+            // document.getElementById('alert2').innerHTML=`<p>${text}</p>`;
+            document.getElementById('title').innerHTML=`${text}`;
+            document.getElementById('alert2').style.display=state;
+        }
+
+        document.getElementById('close').addEventListener('click',function(){
+            document.getElementById('alert2').style.display="none";
+        })
+    </script>
+
+<script 
+src="https://code.jquery.com/jquery-3.6.0.min.js" 
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+crossorigin="anonymous"></script>
+    
+</body>
+</html>

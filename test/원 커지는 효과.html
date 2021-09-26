@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <section class="circle-expand">
+            <div class="circle green ">a</div>
+            <div class="circle yellow ">b</div>
+            <div class="circle red ">c</div>
+            <div class="circle blue ">d</div>
+            <div class="circle white">d</div>
+        </section>
+
+        <style>
+            html {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+            }
+            body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+            }
+            .circle-expand {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                background: chartreuse;
+            }
+            .circle {
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                /* margin-left: -50px;
+                margin-top: -50px; */
+                animation-name: circleExpand;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                transform: translate(-50%,-50%);
+                /*원이 커지면서 (0,0)위치로 와야 원이 중앙에서부터 커지는걸 막는다*/
+
+                opacity: 0;
+
+            }
+            .green {
+                background: #34a853;
+                animation-name: circleExpand;
+                animation-delay: 0s;
+                
+            }
+            .yellow {
+                background: #fbbc05;
+
+                animation-name: circleExpand;
+                animation-delay: 0.3s;
+                
+            }
+            .red {
+                background: #ea4335;
+
+                animation-name: circleExpand;
+                animation-delay: 0.6s;
+                
+            }
+            .blue {
+                background: #4285f4;
+
+                animation-name: circleExpand;
+                animation-delay: 0.9s;
+                
+            }
+            .white {
+                background: white;
+                animation-name: circleExpand;
+                animation-delay: 1.2s;
+                
+            }
+            @keyframes circleExpand {
+
+                0% {
+                    border-radius: 9999px;
+                    opacity: 1;
+                }
+                to {
+                    width: 9999px;
+                    height: 9999px;
+                    border-radius: 9999px;
+                }
+
+            }
+        </style>
+    </body>
+</html>
