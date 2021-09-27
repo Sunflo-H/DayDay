@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../css/index.css" />
-
-    <script src="../js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/cloth.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
 </head>
 
 <body>
@@ -26,121 +25,38 @@
                     </label>
                     <div class="sidebar">
                         <div class="sidebar-margin">
-                            <a href="login.html" class="menu hover-login"><span>로그인</span></a>
-                            <a href="index.html"  class="menu hover-home"><span>홈</span></a>
+                            <a href="../index.html"  class="menu hover-home"><span>홈</span></a>
                             <a href="youtube.html" class="menu hover-blue"><span>하루영상</span></a>
                             <a href="todolist.html" class="menu hover-red"><span>To DO List</span></a>
                             <a href="cloth.html" class="menu hover-yellow"><span>오늘 뭐 입지?</span></a>
                             <a href="weight.html" class="menu hover-green"><span>몸매 관리</span></a>
-                            
                         </div>
                     </div>
                 </div>
-
             </div>
         </aside>
     </header>
-        <div>
-            <!--헤더 div-->
-            <div>
-                <!--로고-->
-
-            </div>
-
-            <div>
-                <!-- id, password, 로그인 버튼-->
-                <label for="input_id">ID</label>
-                <input namd="input_id" type="text">
-                <label for="input_id">PW</label>
-                <input namd="input_id" type="text">
-                <input type="button" value="login">
-            </div>
-
-            <div>
-                <!--지역정보 리스트-->
-                <span>지역을 선택해주세요 &nbsp</span>
-                <select name="city_list" id="city_list">
-                    <option value="seoul">서울</option>
-                    <option value="busan">부산</option>
-                </select>
-            </div>
-
-            <div>
-                <!--지역정보 검색-->
-                <script>
-                    var money = 100;
-                    var sum = 0;
-                    var count = 0;
-                    for (var i = 0; i < 10; i++) {
-                        eval("var sum" + (i + 1) + "=0");
-                    }
-
-                    while (sum < 55000) {
-                        switch (true) {
-                            case (count < 10):
-                                money = 100;
-                                sum1 += money;
-                                break;
-                            case (count < 20):
-                                money = 200;
-                                sum2 += money;
-                                break;
-                            case (count < 30):
-                                money = 300;
-                                sum3 += money;
-                                break;
-                            case (count < 40):
-                                money = 400;
-                                sum4 += money;
-                                break;
-                            case (count < 50):
-                                money = 500;
-                                sum5 += money;
-                                break;
-                            case (count < 60):
-                                money = 600;
-                                sum6 += money;
-                                break;
-                            case (count < 70):
-                                money = 700;
-                                sum7 += money;
-                                break;
-                            case (count < 80):
-                                money = 800;
-                                sum8 += money;
-                                break;
-                            case (count < 90):
-                                money = 900;
-                                sum9 += money;
-                                break;
-                            case (count < 100):
-                                money = 1000;
-                                sum10 += money;
-                                break;
-                        }
-                        sum += money;
-                        console.log(`합 : ${sum} 가격 : ${money}`);
-                        console.log(`카운트 : ${count}`);
-
-                        count++;
-
-
-                    }
-                    for (var i = 0; i < 10; i++) {
-                        console.log(eval("sum" + (i + 1)));
-                    }
-                    console.log(sum1);
-                </script>
-            </div>
-        </div>
 
     </header>
 
     <main>
-        <button class=get_weather>날씨 받기</button>
+        <div class="title">
+            오늘 뭐 입지?
+        </div>
+        <div class="cloth-box">
+            <!--지역정보 리스트-->
+            <span>지역을 선택해주세요 &nbsp</span>
+            <select name="city_list" id="city_list">
+                <option value="seoul">서울</option>
+                <option value="busan">부산</option>
+            </select>
+            
+            <button class=get_weather>날씨 받기</button>
+        </div>
+        
         <script>
-            var name = prompt('Input your name!!');
-            document.write('Welcome ' + name);
+            // var name = prompt('Input your name!!');
+            // document.write('Welcome ' + name);
 
         </script>
         <div>
@@ -157,7 +73,7 @@
             </article>
         </div>
     </main>
-
+<script src="../js/cloth.js"></script>
 </body>
 
 </html>
