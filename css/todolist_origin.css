@@ -39,6 +39,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-top: 100px;
 }
 /* 메모이미지에 맞는 박스의 위치 */
 .box{
