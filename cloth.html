@@ -43,15 +43,32 @@
         <div class="title">
             오늘 뭐 입지?
         </div>
-        <div class="cloth-box">
-            <!--지역정보 리스트-->
-            <span>지역을 선택해주세요 &nbsp</span>
-            <select name="city_list" id="city_list">
-                <option value="seoul">서울</option>
-                <option value="busan">부산</option>
-            </select>
-            
-            <button class=get_weather>날씨 받기</button>
+        <div class="main-box">
+            <div class="weather-box">
+                <div class="select-box">
+                    <span>지역을 선택해주세요</span>
+                    <select name="city_list" id="city_list">
+                        <option value="seoul">서울</option>
+                        <option value="busan">부산</option>
+                    </select>
+                </div>
+                <div class="temper-box">
+                    <span id="temper"></span>
+                </div>
+                <div class="weather-image-box">
+                    <img src="src/img/weather_cloud_little.png">
+                </div>
+                
+                <!-- <button class=get_weather>날씨 받기</button> -->
+            </div>
+            <div class="cloth-box">
+                <div class="cloth-text">
+
+                </div>
+                <div class="cloth-image">
+
+                </div>
+            </div>
         </div>
         
         <script>
@@ -73,7 +90,7 @@
             </article>
         </div>
     </main>
-<script src="../js/cloth.js"></script>
+<script src="/js/cloth.js"></script>
 </body>
 
 </html>
