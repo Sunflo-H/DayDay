@@ -12,13 +12,11 @@ addEventListener('load', function () {
     let check = document.querySelector('#check');
 
     addVideoButton.addEventListener('click', () => {
-        videoListBox.insertAdjacentHTML(
-            "beforeend",
-            `<div class="list-box">
-            <span>${title.value}</span>
-            <input type="button" value="X" class="remove-video-button">
-        </div>`
-        )
+        let html = `<div class="list-box">
+                        <span>${title.value}</span>
+                        <input type="button" value="X" class="remove-video-button">
+                    </div>`
+        videoListBox.insertAdjacentHTML( "beforeend", html );
         // console.log(videoListBox.lastElementChild.lastElementChild);
         // videoListBox.lastElementChild.lastElementChild.classList.add('remove-video-button');
         // 제거버튼 갱신
@@ -43,11 +41,11 @@ addEventListener('load', function () {
         }
     }
 
-    removeclick();
+    removeClick();
+
     setting.addEventListener('click', function () {
         if (check.checked == false) {
             console.log("체크!");
-            console.log(check.checked);
             youtubeBox
                 .classList
                 .remove('open-youtube');
@@ -71,7 +69,6 @@ addEventListener('load', function () {
             }, 1100);
         } else {
             console.log("체크!");
-            console.log(check.checked);
             youtubeBox
                 .classList
                 .add('close-setting');

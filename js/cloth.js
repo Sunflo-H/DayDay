@@ -18,6 +18,7 @@ const getJSON = function(url, callback){
 
 let cityList = document.querySelector("#city_list");
 function getWeather(){
+    console.log("실행");
     let temper = document.querySelector('#temper');
     console.log(cityList.value);
     getJSON(`http://api.openweathermap.org/data/2.5/weather?q=${cityList.value}&appid=b9482d122895622742fa0faaa664cf32&units=metric`, 
@@ -25,8 +26,8 @@ function getWeather(){
         if(err !==null){
             alert('죄송합니다 오류가 발생했습니다.'+err);
         }else{
-            console.log(data.weather[0].main);
-            console.log(data.weather[0].description);
+            // console.log(data.weather[0].main);
+            // console.log(data.weather[0].description);
             temper.innerHTML=`오늘의 온도 : ${data.main.temp}`
         }
     });
@@ -51,7 +52,7 @@ function getCloth(){
     
     getJSON(`http://api.openweathermap.org/data/2.5/weather?q=${cityList.value}&appid=b9482d122895622742fa0faaa664cf32&units=metric`, 
     function(err,data){
-        const temp =23;
+        let temp = data.main.temp;
         if(err !==null){
             alert('죄송합니다 오류가 발생했습니다.'+err);
         }else{
@@ -59,25 +60,25 @@ function getCloth(){
             if(28<=temp){
                 clothText.innerHTML=clothTextArr[0];
                 clothImage.innerHTML=clothImageArr[0];
-            }else if(23<=temp<=27){
+            }else if(23<=temp){
                 clothText.innerHTML=clothTextArr[1];
                 clothImage.innerHTML=clothImageArr[1];
-            }else if(20<=temp<=22){
+            }else if(20<=temp){
                 clothText.innerHTML=clothTextArr[2];
                 clothImage.innerHTML=clothImageArr[2];
-            }else if(17<=temp<=19){
+            }else if(17<=temp){
                 clothText.innerHTML=clothTextArr[3];
                 clothImage.innerHTML=clothImageArr[3];
-            }else if(12<=temp<=16){
+            }else if(12<=temp){
                 clothText.innerHTML=clothTextArr[4];
                 clothImage.innerHTML=clothImageArr[4];
-            }else if(9<=temp<=11){
+            }else if(9<=temp){
                 clothText.innerHTML=clothTextArr[5];
                 clothImage.innerHTML=clothImageArr[5];
-            }else if(5<=temp<=8){
+            }else if(5<=temp){
                 clothText.innerHTML=clothTextArr[6];
                 clothImage.innerHTML=clothImageArr[6];
-            }else if(temp<=4){
+            }else {
                 clothText.innerHTML=clothTextArr[7];
                 clothImage.innerHTML=clothImageArr[7];
             }            

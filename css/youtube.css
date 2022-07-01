@@ -16,8 +16,6 @@ body,html{
 }
 
 .youtube-box{
-    /* width: 1000px;
-    /* width: 400px; */
     height: 500px; 
     
     border: 5px solid white;
@@ -164,9 +162,15 @@ body,html{
     bottom: 5%;
     left: 50%;
     margin-left: -25px;
+    text-align: center;
+    line-height: 60px;
 }
 #check{
     display: none;
+}
+.setting i {
+    color: white;
+    font-size: 30px;
 }
 /* etc class */
 .hidden{

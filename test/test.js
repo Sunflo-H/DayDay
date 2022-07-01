@@ -69,17 +69,25 @@ function remove3(event){
   tag_ul.removeChild(tag_li_num);
 }
 
-function sum(a,b){
-  console.log(a,b);
-  let boo = a>b;
-  console.log(boo);
-  switch (a>b){
-    case true: let result = "a가 b보다 크다";
-              console.log(result);
-              break;
-    case false: result = "a가 b보다 작다"; 
-              console.log(result);
-              break;
-  }
-  console.log('함수실행');
-}
+let one = document.querySelector('.one');
+let two = document.querySelector('.two');
+let three = document.querySelector('.three');
+one.addEventListener('click',function(event){
+  console.log(event.currentTarget);
+})
+two.addEventListener('click',function(event){
+  console.log(event.currentTarget);
+})
+three.addEventListener('click',function(event){
+  event.stopPropagation();
+  console.log(event.currentTarget);
+})
+// const divs = document.querySelectorAll('div');
+
+// for(var i =0;i<divs.length;i++){
+//     divs[i].addEventListener('click',logEvent);
+// }
+
+// function logEvent(event) {
+//     console.log(event.currentTarget.className);
+// }
